@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AutoFinder", "AutoFinder\AutoFinder.pyproj", "{234C021F-89D0-448A-AAD9-1BEC470345B0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{BD5552E4-FBF2-490F-B0BA-4F0DC6D802E7}"
+	ProjectSection(SolutionItems) = preProject
+		PathsOfImages.txt = PathsOfImages.txt
+		..\..\MGR-Projects\GK3D\GK3D.App\Content\inne\Straflos avek1.png = ..\..\MGR-Projects\GK3D\GK3D.App\Content\inne\Straflos avek1.png
+		..\..\..\..\Downloads\training.zip = ..\..\..\..\Downloads\training.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

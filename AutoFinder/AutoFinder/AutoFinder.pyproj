@@ -22,6 +22,71 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AutoFinder.py" />
+    <Compile Include="DataManipulations\ImageToArrayConverter.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataManipulations\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\images\" />
+    <Folder Include="Data\labels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\images\Image_01.png" />
+    <Content Include="Data\images\Image_02.png" />
+    <Content Include="Data\images\Image_03.png" />
+    <Content Include="Data\images\Image_04.png" />
+    <Content Include="Data\images\Image_05.png" />
+    <Content Include="Data\images\Image_06.png" />
+    <Content Include="Data\images\Image_07.png" />
+    <Content Include="Data\images\Image_08.png" />
+    <Content Include="Data\images\Image_09.png" />
+    <Content Include="Data\images\Image_10.png" />
+    <Content Include="Data\images\Image_11.png" />
+    <Content Include="Data\images\Image_12.png" />
+    <Content Include="Data\images\Image_13.png" />
+    <Content Include="Data\images\Image_14.png" />
+    <Content Include="Data\images\Image_15.png" />
+    <Content Include="Data\images\Image_16.png" />
+    <Content Include="Data\images\Image_17.png" />
+    <Content Include="Data\images\Image_18.png" />
+    <Content Include="Data\images\Image_19.png" />
+    <Content Include="Data\images\Image_20.png" />
+    <Content Include="Data\images\Image_21.png" />
+    <Content Include="Data\images\Image_22.png" />
+    <Content Include="Data\images\Image_23.png" />
+    <Content Include="Data\images\Image_24.png" />
+    <Content Include="Data\images\Image_25.png" />
+    <Content Include="Data\images\Image_26.png" />
+    <Content Include="Data\images\Image_27.png" />
+    <Content Include="Data\labels\Image_01.png" />
+    <Content Include="Data\labels\Image_02.png" />
+    <Content Include="Data\labels\Image_03.png" />
+    <Content Include="Data\labels\Image_04.png" />
+    <Content Include="Data\labels\Image_05.png" />
+    <Content Include="Data\labels\Image_06.png" />
+    <Content Include="Data\labels\Image_07.png" />
+    <Content Include="Data\labels\Image_08.png" />
+    <Content Include="Data\labels\Image_09.png" />
+    <Content Include="Data\labels\Image_10.png" />
+    <Content Include="Data\labels\Image_11.png" />
+    <Content Include="Data\labels\Image_12.png" />
+    <Content Include="Data\labels\Image_13.png" />
+    <Content Include="Data\labels\Image_14.png" />
+    <Content Include="Data\labels\Image_15.png" />
+    <Content Include="Data\labels\Image_16.png" />
+    <Content Include="Data\labels\Image_17.png" />
+    <Content Include="Data\labels\Image_18.png" />
+    <Content Include="Data\labels\Image_19.png" />
+    <Content Include="Data\labels\Image_20.png" />
+    <Content Include="Data\labels\Image_21.png" />
+    <Content Include="Data\labels\Image_22.png" />
+    <Content Include="Data\labels\Image_23.png" />
+    <Content Include="Data\labels\Image_24.png" />
+    <Content Include="Data\labels\Image_25.png" />
+    <Content Include="Data\labels\Image_26.png" />
+    <Content Include="Data\labels\Image_27.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
