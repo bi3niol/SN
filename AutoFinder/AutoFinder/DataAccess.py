@@ -10,10 +10,11 @@ from sklearn import model_selection
 class DataAccess(object):
     FileExtension = ".png"
 
-    def __init__(self, imagesDir=Params.IMAGES_DIR, masksDir=Params.MASKS_DIR):
+    def __init__(self, testDir=Params.TEST_DIR, imagesDir=Params.IMAGES_DIR, masksDir=Params.MASKS_DIR):
         self.images_gray = {}
         self.masks = {}
         self.Ids = []
+        self.testDir = testDir
         self.imagesDir = imagesDir
         self.masksDir = masksDir
 
@@ -28,14 +29,25 @@ class DataAccess(object):
         return super().__init__()
 
 
-    def GetDataGenerators(self, batchSize = Params.BATCH_SIZE):
+    def GetDataGenerators(self, batchSize=Params.BATCH_SIZE):
         train_ids, validation_ids = model_selection.train_test_split(self.Ids, random_state=42, test_size=0.30)
         return self.GenerateDataBatch(train_ids,batchSize),self.GenerateDataBatch(validation_ids,batchSize)
 
-    def GetGrayImage(self,id):
+    def GetGrayImage(self,id, isTest=False):
+        if isTest:
+            return (imgOp.ToGrayImage(imgOp.ImageToArrayConverter(os.path.join(self.testDir,DataAccess.GetFileName(id)))))
         return self.images_gray[id]
+    def GetMask(self, id, isTest=False):
+        if isTest:
+            maskPath = os.path.join(self.masksDir,DataAccess.GetFileName(id))
+            mask = imgOp.ImageToArrayConverter(maskPath)
+            mask = mask.reshape((mask.shape[0],mask.shape[1],1))
+            return mask
+        return self.masks[id]
 
-    def GetOrginalImage(self,id):
+    def GetOrginalImage(self,id,isTest=False):
+        if isTest:
+            return imgOp.ImageToArrayConverter(os.path.join(self.testDir,DataAccess.GetFileName(id)))
         return imgOp.ImageToArrayConverter(os.path.join(self.imagesDir,DataAccess.GetFileName(id)))
 
     def GenerateDataBatch(self,data, batchSize):

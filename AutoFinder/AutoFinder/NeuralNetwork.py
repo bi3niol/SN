@@ -4,16 +4,21 @@ from keras.optimizers import *
 from keras.losses import binary_crossentropy
 import keras.backend as K
 import Params
-
+import os
 class NeuralNetwork(object):
 
     def __init__(self, modelPath=None):
         
         self.__model = self.__CreateModel()
+        self.name = "Empty Name"
         if modelPath != None:
+            self.name = os.path.basename(modelPath)
             self.__model.load_weights(modelPath)
         self.__model.compile(loss=NeuralNetwork.bce_dice_loss, optimizer=Adam(lr=1e-4), metrics=[NeuralNetwork.dice_coef])
+        
         return super().__init__()
+    def getModel(self):
+        return self.__model;
 
     def dice_coef(y_true, y_pred, smooth=1):
         y_true_f = K.flatten(y_true)

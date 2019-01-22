@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AutoFinder.py" />
+    <Compile Include="Comitet.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DataAccess.py">
       <SubType>Code</SubType>
     </Compile>
